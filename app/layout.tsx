@@ -1,16 +1,26 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Navbar from "@/components/Navbar";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
+const cabinetGrotesk = localFont({
+  src: [
+    {
+      path: './fonts/CabinetGrotesk-Regular.woff',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: './fonts/CabinetGrotesk-Medium.woff',
+      weight: '700',
+      style: 'normal',
+    },
+    {
+      path: './fonts/CabinetGrotesk-Bold.woff',
+      weight: '900',
+      style: 'normal',
+    },
+  ],
 });
 
 export const metadata: Metadata = {
@@ -26,9 +36,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${cabinetGrotesk.className}  antialiased`}
       >
-        {children}
+      <header className="pt-5"><Navbar /></header>
+      <main>{children}</main>
       </body>
     </html>
   );
