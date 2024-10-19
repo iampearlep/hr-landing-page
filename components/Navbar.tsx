@@ -18,8 +18,8 @@ const Navbar = () => {
           </div>
           <div className="flex flex-row justify-between items-center font-bold text-[1rem] gap-x-6">
             <Link href="/" className="hover:underline delay-75 duration-300 ease-in-out">Services</Link>
-            <Link href="/">About</Link>
-            <Link href="/">Contact</Link>
+            <Link href="/"className="hover:underline delay-75 duration-300 ease-in-out">About</Link>
+            <Link href="/"className="hover:underline delay-75 duration-300 ease-in-out">Contact</Link>
           </div>
         </div>
         <div className="flex flex-row font-bold text-[1rem] justify-between items-center gap-x-6">
@@ -90,7 +90,7 @@ const Navbar = () => {
                   onClick={handleToggle}
                   className="cursor-pointer w-full py-2"
                 >
-                  Testimonials
+                 Contact
                 </Link>
                 <Link
                   href="/"
