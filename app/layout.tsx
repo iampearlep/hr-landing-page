@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
 
 const cabinetGrotesk = localFont({
   src: [
@@ -40,6 +41,9 @@ export default function RootLayout({
       >
       <header className="pt-5"><Navbar /></header>
       <main>{children}</main>
+      <footer>
+        <Footer />
+      </footer>
       </body>
     </html>
   );
